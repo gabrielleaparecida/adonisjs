@@ -1,0 +1,30 @@
+######### Cadastro  ClosetVirtual
+
+POST http://127.0.0.1:3333/ClosetVirtual HTTP/1.1
+Content-Type: application/json
+Authorization:Bearer MQ.PumXyNpu9QmizvQRjFVyQmH6nQXA-Lyh_YESHiupUXhExRgJG7ep3T4OnExz 
+
+{
+    "name":"ClosetVirtual1"
+}
+
+######### Listar todos os ClosetVirtual
+
+GET http://127.0.0.1:3333/ClosetVirtual HTTP/1.1
+Content-Type: application/json
+Authorization:Bearer MQ.PumXyNpu9QmizvQRjFVyQmH6nQXA-Lyh_YESHiupUXhExRgJG7ep3T4OnExz 
+
+######### Alterar ClosetVirtual
+
+PUT  http://127.0.0.1:3333/ClosetVirtual HTTP/1.1
+Content-Type: application/json
+Authorization:Bearer MQ.PumXyNpu9QmizvQRjFVyQmH6nQXA-Lyh_YESHiupUXhExRgJG7ep3T4OnExz 
+
+{
+    "name": "ClosetVirtualII"
+}
+
+######### Apagar ClosetVirtual
+DELETE http://127.0.0.1:3333/ClosetVirtual HTTP/1.1
+Content-Type: application/json
+Authorization:Bearer MQ.PumXyNpu9QmizvQRjFVyQmH6nQXA-Lyh_YESHiupUXhExRgJG7ep3T4OnExz 
