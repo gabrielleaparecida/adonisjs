@@ -1,4 +1,4 @@
-import { schema, CustomMessages } from '@ioc:Adonis/Core/Validator'
+import { schema,rules, CustomMessages } from '@ioc:Adonis/Core/Validator'
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class ClosetVirtualValidator {
@@ -23,7 +23,7 @@ export default class ClosetVirtualValidator {
    *     ])
    *    ```
    */
-  public schema = schema.create({})
+  public schema = schema.create({
     itens: schema.string({}, [
       rules.required()
     ]),
@@ -31,9 +31,9 @@ export default class ClosetVirtualValidator {
       rules.required()
     ]),
     cor: schema.string({}, [
-      rules.requised
+      rules.required()
     ])
-
+})
 
   /**
    * Custom messages for validation failures. You can make use of dot notation `(.)`
@@ -46,5 +46,7 @@ export default class ClosetVirtualValidator {
    * }
    *
    */
-  public messages: CustomMessages = {}
+  public messages: CustomMessages = {
+    required: "O{{field} é obrigatório para se registrar!!!",
+  }
 }
